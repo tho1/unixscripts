@@ -89,3 +89,61 @@ else
 fi
 
 exit 0
+
+
+
+-- load as dialog form.
+frmCustomer.showDialog()
+
+Convert.ToString()
+
+-- check when the enter keys is pressed.
+
+ Private Sub TextPass_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextPass.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Call check()
+        End If
+    End Sub
+
+	
+	
+	
+ If Me.TxtConfirmpass.Text <> Me.TxtPassword.Text Then
+            MsgBox("Mismatch Password", MsgBoxStyle.Exclamation)
+            Me.TxtConfirmpass.Focus()
+ End IF			
+
+Try
+            Dim a As Integer
+ 
+			a = MsgBox("Are you sure you want to update this employee?", MsgBoxStyle.YesNo)
+        If a = vbYes Then
+			 MessageBox.Show("successfully save")
+	Else
+            Me.textid.Focus()
+        End If
+ Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub	
+	
+	
+ With Me
+            .TextSearchFname.Clear()
+            .TextSearchMname.Clear()
+			
+			
+			
+Dim myReader As New System.IO.StreamReader("Somefile.txt") 
+Dim Line as String = ""
+
+While Not IsNothing(line)
+	line=myReader.ReadLine()
+	If Not IsNothing(line) then
+		Console.WriteLine(line)
+	End If
+End While
+
+myReader.close()
+Console.ReadLine
+
