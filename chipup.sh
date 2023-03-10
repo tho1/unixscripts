@@ -1,6 +1,8 @@
 #/bin/bash
 
-#read the ip addr cmd and add an interface
+#this shell script allows one to ssh into a chip computer
+
+#read the ip addr cmd and add as usb interface
 
 ip addr add 10.1.1.1/24 dev usb0
 ip link set usb0 up
